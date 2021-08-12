@@ -19,6 +19,16 @@
             "username": "",
             "bvn": "",
             "account_type": ""
+        },
+        {
+            "id": 4,
+            "first_name": "Kelvin",
+            "last_name": "Okoro",
+            "phone_number": "08163091749",
+            "password": "10UsT0087",
+            "username": "",
+            "bvn": "",
+            "account_type": ""
         }
     ],
     "individual_accounts": [],
