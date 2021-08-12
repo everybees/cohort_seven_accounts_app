@@ -2,19 +2,31 @@ from models.accounts import IndividualAccount
 from models.information import UserInformation
 import json
 
-
 user_data_file = open("user_data.json", "r+")
 
 user_data_file_content = json.load(user_data_file)
 
 
+# def check_string(string):
+#     while True:
+#         input_string = input(string)
+#         if input_string != "":
+#             return input_string
+#         else:
+#             print("Enter a valid input.")
+
+
 def check_string(string):
     while True:
-        input_string = input(string)
-        if input_string != "":
-            return input_string
-        else:
-            print("Enter a valid input.")
+        try:
+            print()
+            input_string = input(string)
+            if input_string != "":
+                return input_string
+            else:
+                raise ValueError("Invalid input, try again!")
+        except ValueError as err:
+            print("\033[91m" + str(err) + "\033[0m")
 
 
 def create_user():
@@ -69,4 +81,3 @@ def user_request_for_account(phone_number, account_type, bvn, username):
             if bvn_valid and account_type != "":
                 if account_type == "individual_account":
                     user_account = IndividualAccount(user_data, "0000001", "individual_account", 0.00, "1234")
-
