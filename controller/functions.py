@@ -2,7 +2,7 @@ from models.accounts import IndividualAccount
 from models.information import UserInformation
 import json
 
-
+# user data
 user_data_file = open("user_data.json", "r+")
 
 user_data_file_content = json.load(user_data_file)
