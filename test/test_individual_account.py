@@ -1,7 +1,6 @@
-import unittest
-
 from models.information import UserInformation
 
+import unittest
 
 class BankTest(unittest.TestCase):
     
