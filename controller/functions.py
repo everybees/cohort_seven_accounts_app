@@ -2,7 +2,7 @@ from models.accounts import IndividualAccount
 from models.information import UserInformation
 import json
 
-
+# user data
 user_data_file = open("user_data.json", "r+")
 
 user_data_file_content = json.load(user_data_file)
@@ -46,10 +46,7 @@ def create_user():
 
 
 def check_bvn_valid(bvn):
-    if bvn.startswith("4"):
-        return True
-    else:
-        return False
+    return bool(bvn.startswith("4"))
 
 
 def user_request_for_account(phone_number, account_type, bvn, username):
@@ -66,7 +63,10 @@ def user_request_for_account(phone_number, account_type, bvn, username):
             json.dump(user_data_file_content, user_data_file, indent=4)
             user_data_file.close()
 
-            if bvn_valid and account_type != "":
-                if account_type == "individual_account":
-                    user_account = IndividualAccount(user_data, "0000001", "individual_account", 0.00, "1234")
+            if (
+                bvn_valid
+                and account_type != ""
+                and account_type == "individual_account"
+            ):
+                user_account = IndividualAccount(user_data, "0000001", "individual_account", 0.00, "1234")
 
