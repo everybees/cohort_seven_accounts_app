@@ -8,14 +8,6 @@ user_data_file = open("../user_data.json", "r+")
 user_data_file_content = json.load(user_data_file)
 
 
-# def check_string(string):
-#     while True:
-#         input_string = input(string)
-#         if input_string != "":
-#             return input_string
-#         else:
-#             print("Enter a valid input.")
-
 def print_error(err):
     print("\033[91m" + str(err) + "\033[0m")
 
@@ -120,4 +112,25 @@ def update_user(user_id, first_name="", last_name="", phone_number=""):
 
 print(get_user(4))
 
+
 update_user(4, "John")
+
+def login():
+    pass
+
+
+def deposit():
+    pass
+
+def withdraw():
+    pass
+
+def logout():
+    pass
+
+def check_balance():
+    pass
+
+def view_account_details():
+    pass
+
