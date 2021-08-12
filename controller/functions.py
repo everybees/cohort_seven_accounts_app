@@ -58,10 +58,7 @@ def create_user():
 
 
 def check_bvn_valid(bvn):
-    if bvn.startswith("4"):
-        return True
-    else:
-        return False
+    return bool(bvn.startswith("4"))
 
 
 def user_request_for_account(phone_number, account_type, bvn, username):

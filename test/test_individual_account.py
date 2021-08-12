@@ -10,13 +10,10 @@ class BankTest(unittest.TestCase):
         last_name = "Doe"
         phone_number = "08097685743"
         bvn = "43454566763456"
-        username = "everybees"
-        password = "my#password"
-        account_type = "individual_account"
 
         user_account_details = UserInformation(
-            first_name, last_name, phone_number, bvn, username, password, account_type
-            )
+            first_name, last_name, phone_number, bvn
+        )
 
         self.assertEqual(user_account_details.account_type, "individual_account")
         self.assertEqual(user_account_details.bvn.startswith('4'), True)
