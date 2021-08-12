@@ -70,3 +70,21 @@ def user_request_for_account(phone_number, account_type, bvn, username):
             ):
                 user_account = IndividualAccount(user_data, "0000001", "individual_account", 0.00, "1234")
 
+def login():
+    pass
+
+
+def deposit():
+    pass
+
+def withdraw():
+    pass
+
+def logout():
+    pass
+
+def check_balance():
+    pass
+
+def view_account_details():
+    pass
