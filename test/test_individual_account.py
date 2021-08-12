@@ -1,9 +1,13 @@
+import unittest
+
 from models.information import UserInformation
 
 import unittest
 
 class BankTest(unittest.TestCase):
-    
+    def test_mock(self):
+        self.assertTrue(True, True)
+
     def test_individual_account_request(self):
         first_name = "John"
         last_name = "Doe"
